@@ -20,32 +20,17 @@ Install it
 ```dart
 import 'package:horizontalcancelablechipgroup/horizontalcancelablechipgroup.dart';
 
-MultiSelectChipGroup(
-              items: [
-                'Hello',
-                'Firoz',
-                'Evan',
-                'Nadia',
-                'iafgdiafgsuiayfgayifgiafg'
-              ],
-              preSelectedItems: [
-                'Evan',
-                'Nadia',
-              ],
-              onSelectionChanged: (values) {
-                print(values);
+HorizontalCancelableChipGroup(
+              backgroundColor: Colors.orange,
+              labelTextColor: Colors.black,
+              borderColor: Colors.green,
+              deleteIcon: Icon(Icons.cancel),
+              availableItems: (List<String> value){
+                print(value);
               },
-              horizontalChipSpacing: 10,
-              selectedColor: Colors.green,
-              disabledColor: Colors.white,
-              leftCommonIcon: Icons.perm_identity,
-              leftIcons: [
-                Icons.alarm,
-                Icons.ac_unit,
-                Icons.accessibility,
-                Icons.account_balance,
-                Icons.perm_identity,
-              ],
+              labelTextFontSize: 14,
+              dividerPadding: 5,
+              items: ['firoz','rubayet','nadia','suriya','rakib','mamun'],
             ),
 ```
 
