@@ -1,4 +1,5 @@
 library horizontalcancelablechipgroup;
+
 import 'package:flutter/material.dart';
 
 class HorizontalCancelableChipGroup extends StatefulWidget {
@@ -14,14 +15,14 @@ class HorizontalCancelableChipGroup extends StatefulWidget {
 
   HorizontalCancelableChipGroup(
       {@required this.items,
-        this.availableItems,
-        this.animationDuration = 250,
-        this.labelTextColor = Colors.black,
-        this.dividerPadding = 5,
-        this.backgroundColor = Colors.white,
-        this.labelTextFontSize = 14,
-        this.deleteIcon = const Icon(Icons.cancel),
-        this.borderColor = Colors.black45});
+      this.availableItems,
+      this.animationDuration = 250,
+      this.labelTextColor = Colors.black,
+      this.dividerPadding = 5,
+      this.backgroundColor = Colors.white,
+      this.labelTextFontSize = 14,
+      this.deleteIcon = const Icon(Icons.cancel),
+      this.borderColor = Colors.black45});
 
   @override
   _HorizontalCancelableChipGroupState createState() =>
@@ -55,31 +56,31 @@ class _HorizontalCancelableChipGroupState
       BuildContext context, int index, Animation<double> animation) {
     return index < widget.items.length
         ? SizeTransition(
-      axis: Axis.horizontal,
-      sizeFactor: animation,
-      key: ValueKey<int>(index),
-      child: Padding(
-        padding: EdgeInsets.only(
-            left: widget.dividerPadding / 2,
-            right: widget.dividerPadding / 2),
-        child: Chip(
-          shape: StadiumBorder(
-            side: BorderSide(color: widget.borderColor),
-          ),
-          backgroundColor: widget.backgroundColor,
-          labelStyle: TextStyle(
-              color: widget.labelTextColor,
-              fontSize: widget.labelTextFontSize),
-          label: Text(
-            widget.items[index],
-          ),
-          deleteIcon: widget.deleteIcon,
-          onDeleted: () {
-            _removeItem(index);
-          },
-        ),
-      ),
-    )
+            axis: Axis.horizontal,
+            sizeFactor: animation,
+            key: ValueKey<int>(index),
+            child: Padding(
+              padding: EdgeInsets.only(
+                  left: widget.dividerPadding / 2,
+                  right: widget.dividerPadding / 2),
+              child: Chip(
+                shape: StadiumBorder(
+                  side: BorderSide(color: widget.borderColor),
+                ),
+                backgroundColor: widget.backgroundColor,
+                labelStyle: TextStyle(
+                    color: widget.labelTextColor,
+                    fontSize: widget.labelTextFontSize),
+                label: Text(
+                  widget.items[index],
+                ),
+                deleteIcon: widget.deleteIcon,
+                onDeleted: () {
+                  _removeItem(index);
+                },
+              ),
+            ),
+          )
         : SizedBox();
   }
 
@@ -87,7 +88,7 @@ class _HorizontalCancelableChipGroupState
     setState(() {
       listKey.currentState.removeItem(
         index,
-            (context, animation) => buildItem(context, index, animation),
+        (context, animation) => buildItem(context, index, animation),
         duration: Duration(milliseconds: widget.animationDuration),
       );
 

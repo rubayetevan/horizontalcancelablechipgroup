@@ -8,7 +8,7 @@ Use the package manager [pub](https://pub.dev) to install Horizontalcancelablech
 
 ```bash
 dependencies:
-  horizontalcancelablechipgroup: ^1.0.0
+  horizontalcancelablechipgroup: ^1.0.3
 ```
 ```bash
 Install it
