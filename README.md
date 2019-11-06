@@ -20,12 +20,13 @@ Install it
 ```dart
 import 'package:horizontalcancelablechipgroup/horizontalcancelablechipgroup.dart';
 
-HorizontalCancelableChipGroup(
+ HorizontalCancelableChipGroup(
+              animationDuration: 250,
               backgroundColor: Colors.orange,
               labelTextColor: Colors.black,
               borderColor: Colors.green,
               deleteIcon: Icon(Icons.cancel),
-              availableItems: (List<String> value){
+              availableItems: (value){
                 print(value);
               },
               labelTextFontSize: 14,

@@ -1,6 +1,6 @@
 name: horizontalcancelablechipgroup
 description: A flluter package to provide horizontal cancelable chip group. Horizontalcancelablechipgroup is a flutter library which creates horizontal list of chips with delete button and heavy customization.
-version: 1.0.0
+version: 1.0.1
 author: MD Rubayet Hassan<rubayet.evan@gmail.com>
 homepage: https://github.com/rubayetevan/horizontalcancelablechipgroup
 
