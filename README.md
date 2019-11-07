@@ -21,7 +21,6 @@ Install it
 import 'package:horizontalcancelablechipgroup/horizontalcancelablechipgroup.dart';
 
  HorizontalCancelableChipGroup(
-              animationDuration: 250,
               backgroundColor: Colors.orange,
               labelTextColor: Colors.black,
               borderColor: Colors.green,

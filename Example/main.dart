@@ -100,7 +100,6 @@ class _MyHomePageState extends State<MyHomePage> {
               style: Theme.of(context).textTheme.display1,
             ),
             HorizontalCancelableChipGroup(
-              animationDuration: 250,
               backgroundColor: Colors.orange,
               labelTextColor: Colors.black,
               borderColor: Colors.green,
